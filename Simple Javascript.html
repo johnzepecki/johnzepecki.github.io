@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Javascript changes the image when you move mouse over it or click on it</p>
+
+<a href="#" onMouseOver="return changeImage()" onMouseOut= "return changeImageBack()"
+onMouseDown="return handleMDown()" onMouseUp="return handleMUp()"
+><img
+name="jsbutton" src="wildcat.jpg" width="128" height="128" border="0"
+alt="javascript button"></a>
+
+<p>Javascript changes the image back to the original when you move mouse away it or release your click</p>
+ 
+<script type="text/javascript">
+function changeImage()
+{
+document.images["jsbutton"].src= "cats on field.jpg";
+return true;
+}
+function changeImageBack()
+{
+ document.images["jsbutton"].src = "wildcat.jpg";
+ return true;
+}
+function handleMDown()
+{
+ document.images["jsbutton"].src = "paw.jpg";
+ return true;
+}
+function handleMUp()
+{
+ changeImageBack();
+ return true;
+}
+</script>
+</body>
+</html>
